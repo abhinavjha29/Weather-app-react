@@ -5,7 +5,7 @@ const WEATHER_API_KEY = 'YOUR API KEY';
 const GEO_API_OPTIONS = {
   method: 'GET',
   headers: {
-    'X-RapidAPI-Key': '4f0dcce84bmshac9e329bd55fd14p17ec6fjsnff18c2e61917',
+    'X-RapidAPI-Key': REACT_APP_X_RAPID_API_KEY,
     'X-RapidAPI-Host': 'wft-geo-db.p.rapidapi.com',
   },
 };

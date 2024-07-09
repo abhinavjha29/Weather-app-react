@@ -3,13 +3,13 @@ import axios from 'axios';
 const axiosInstance = axios.create({
   baseURL: 'https://wft-geo-db.p.rapidapi.com/v1/geo',
   headers: {
-    'X-RapidAPI-Key': '4f0dcce84bmshac9e329bd55fd14p17ec6fjsnff18c2e61917',
+    'X-RapidAPI-Key': process.env.REACT_APP_X_RAPID_API_KEY,
     'X-RapidAPI-Host': 'wft-geo-db.p.rapidapi.com',
   },
 });
 
 const WEATHER_API_URL = 'https://api.openweathermap.org/data/2.5';
-const WEATHER_API_KEY = 'd57386fdbef3d2779d4aa8a91a2c0015';
+const WEATHER_API_KEY = process.env.REACT_APP_WEATHER_API_KEY
 
 export async function fetchWeatherData(lat, lon) {
   try {
