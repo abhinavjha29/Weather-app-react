@@ -9,10 +9,19 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   min-height: 100vh;
-  background: linear-gradient(-35deg, #000428 0%, #004e92);
+  background: linear-gradient(-35deg, #000428 0%, #f2e8cf 100%);
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+
+/* .default-background-class {
+  background: linear-gradient(-35deg, #000428 0%, #f2e8cf 100%);
+
+} */

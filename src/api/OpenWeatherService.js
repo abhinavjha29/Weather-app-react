@@ -7,7 +7,7 @@ const axiosInstance = axios.create({
     'X-RapidAPI-Host': 'wft-geo-db.p.rapidapi.com',
   },
 });
-
+console.log(process.env.REACT_APP_X_RAPID_API_KEY)
 const WEATHER_API_URL = 'https://api.openweathermap.org/data/2.5';
 const WEATHER_API_KEY = process.env.REACT_APP_WEATHER_API_KEY
 

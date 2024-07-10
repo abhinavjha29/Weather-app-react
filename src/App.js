@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { Box, Container, Grid, Link, SvgIcon, Typography } from '@mui/material';
 import Search from './components/Search/Search';
 import WeeklyForecast from './components/WeeklyForecast/WeeklyForecast';
@@ -16,6 +16,7 @@ import {
   getTodayForecastWeather,
   getWeekForecastWeather,
 } from './utilities/DataUtils';
+import NewsList from './components/News/NewsList';
 
 function App() {
   const [todayWeather, setTodayWeather] = useState(null);
@@ -23,8 +24,24 @@ function App() {
   const [weekForecast, setWeekForecast] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
-
-
+  const [background, setBackground] = useState('');
+  // useEffect(() => {
+  //   if (navigator.geolocation) {
+  //     navigator.geolocation.getCurrentPosition(
+  //       position => {
+  //         const { latitude, longitude } = position.coords;
+  //         searchChangeHandler({ value: `${latitude} ${longitude}`, label: 'Current Location' });
+  //       },
+  //       error => {
+  //         console.error('Error getting current location:', error);
+  //         // Fallback to a default location if necessary
+  //       }
+  //     );
+  //   } else {
+  //     console.error('Geolocation is not supported by this browser.');
+  //     // Fallback to a default location if necessary
+  //   }
+  // }, []);
   const searchChangeHandler = async (enteredData) => {
     const [latitude, longitude] = enteredData.value.split(' ');
 
@@ -54,6 +71,25 @@ function App() {
         city: enteredData.label,
         list: all_week_forecasts_list,
       });
+
+  // const weatherCondition = todayWeatherResponse?.weather[0].main.toLowerCase();
+  // console.log(weatherCondition)
+  // switch (weatherCondition) {
+  //   case 'rain':
+  //     setBackground('rainy-background-class');
+  //     break;
+  //   case 'clear':
+  //     setBackground('sunny-background-class');
+  //     break;
+  //   case 'snow':
+  //     setBackground('snowy-background-class');
+  //     break;
+  //   case 'clouds':
+  //     setBackground('cloudy-background-class');
+  //     break;
+  //   default:
+  //     setBackground('default-background-class');
+  // } 
     } catch (error) {
       setError(true);
     }
@@ -153,6 +189,7 @@ function App() {
 
   return (
     <Container
+    
       sx={{
         maxWidth: { xs: '95%', sm: '80%', md: '1100px' },
         width: '100%',
@@ -198,19 +235,15 @@ function App() {
               underline="none"
               sx={{ display: 'flex' }}
             >
-              <GitHubIcon
-                sx={{
-                  fontSize: { xs: '20px', sm: '22px', md: '26px' },
-                  color: 'white',
-                  '&:hover': { color: '#2d95bd' },
-                }}
-              />
+           
             </Link>
           </Box>
           <Search onSearchChange={searchChangeHandler} />
         </Grid>
         {appContent}
+        <NewsList/>
       </Grid>
+
     </Container>
   );
 }
