@@ -1,4 +1,4 @@
-<h1> align="center">Welcome to Weather App 🌤️📰</h1>
+<h1 align="center"> Welcome to Weather App 🌤️📰</h1>
 
 <p align="center">
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
