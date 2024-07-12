@@ -5,7 +5,7 @@
 
 > A weather and news app for getting the weather and 7 day forcast with air condiotions. Also , top headlines are also shown.
 > The app contains more than 600,000 weather locations.
-> Techonlogies used-:
+-Techonlogies used-:
 
 - ReactJS
 - Nodejs(typescript)
