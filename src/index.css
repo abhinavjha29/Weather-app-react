@@ -1,27 +1,106 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Condensed:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Condensed:wght@300;400;700&display=swap");
 body {
   margin: 0;
-  font-family: 'Poppins', Arial, sans-serif !important;
+  font-family: "Poppins", Arial, sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   min-height: 100vh;
-  background: linear-gradient(-35deg, #000428 0%, #f2e8cf 100%);
-
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.dark {
+  background: linear-gradient(-35deg, #000428 0%, #231a79 100%);
+}
+.light {
+  background: linear-gradient(-35deg, #000428 0%, #f2e8cf 100%);
+}
 
-
-
+#root {
+  width: 100%;
+  height: 100%;
+}
 
 /* .default-background-class {
-  background: linear-gradient(-35deg, #000428 0%, #f2e8cf 100%);
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+  }
 
+  header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(bg.jpg);
+    background-size: cover;
+    animation: animate 2s linear infinite;
+  }
+
+  @keyframes animate {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+
+    100% {
+      filter: hue-rotate(360deg);
+    }
+  }
+
+  header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(rain.png);
+    animation: rain 0.2s linear infinite;
+  }
+
+  @keyframes rain {
+    0% {
+      background-position: 0 0;
+    }
+
+    100% {
+      background-position: 20% 100%;
+    }
+  }
+
+  header .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    height: 50px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+  }
+
+  header .text h3 {
+    color: #000000;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    font-weight: 700;
+  }
 } */
+
+.MuiPaginationItem-text {
+  color: wheat !important;
+}
+
+.spam {
+  color: white;
+}
